@@ -1,0 +1,13 @@
+:root {
+  --font-sans: "Arial", "Helvetica", sans-serif;
+  --font-mono: "Fira Code", "Fira Mono", monospace;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+  --font-abolition: var(--font-abolition);
+  --font-sn-pro: var(--font-sn-pro);
+}

@@ -1,0 +1,19 @@
+:root {
+  --bg-gradient-primary: linear-gradient(
+    45deg,
+    var(--primary),
+    var(--primary-foreground)
+  );
+  --bg-gradient-secondary: linear-gradient(
+    45deg,
+    var(--secondary),
+    var(--secondary-foreground)
+  );
+  --bg-hero-pattern: url("/assets/images/open-graph-thumbnail.jpg");
+}
+
+@theme inline {
+  --background-image-gradient-primary: var(--bg-gradient-primary);
+  --background-image-gradient-secondary: var(--bg-gradient-secondary);
+  --background-image-hero-pattern: var(--bg-hero-pattern);
+}

@@ -1,0 +1,22 @@
+:root {
+  --brand-background: oklch(1 0 0) /* #ffffff */;
+  --brand-foreground: oklch(0.2 0 0) /* #171717 */;
+  --brand-foreground-70: oklch(0.2 0 0 / 70%) /* rgba(23, 23, 23, 0.7) */;
+  --brand-pink-30: oklch(0.54 0.1973 0 / 30%) /* rgba(192, 34, 105, 0.3) */;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-background: oklch(0.14 0 0) /* #0a0a0a */;
+    --brand-foreground: oklch(0.95 0 0) /* #ededed */;
+    --brand-foreground-70: oklch(0.95 0 0 / 70%) /* rgba(237, 237, 237, 0.7) */;
+    --brand-pink-30: oklch(0.54 0.1973 0 / 30%) /* rgba(192, 34, 105, 0.3) */;
+  }
+}
+
+@theme inline {
+  --color-background: var(--brand-background);
+  --color-foreground: var(--brand-foreground);
+  --color-foreground-70: var(--brand-foreground-70);
+  --color-brand-pink-30: var(--brand-pink-30);
+}

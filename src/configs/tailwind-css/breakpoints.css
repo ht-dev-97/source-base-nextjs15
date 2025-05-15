@@ -1,0 +1,15 @@
+:root {
+  --breakpoint-xs: 20rem;
+  --breakpoint-sm: 32rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+}
+
+@theme inline {
+  --breakpoint-xl: var(--breakpoint-xl);
+  --breakpoint-lg: var(--breakpoint-lg);
+  --breakpoint-md: var(--breakpoint-md);
+  --breakpoint-sm: var(--breakpoint-sm);
+  --breakpoint-xs: var(--breakpoint-xs);
+}
