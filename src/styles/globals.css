@@ -1,13 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@import "../configs/tailwind-css/colors.css";
-@import "../configs/tailwind-css/fonts.css";
-@import "../configs/tailwind-css/breakpoints.css";
-@import "../configs/tailwind-css/keyframes.css";
-@import "../configs/tailwind-css/animations.css";
-@import "../configs/tailwind-css/backgrounds.css";
-@import "../configs/tailwind-css/shadows.css";
+@import "../configs/tailwind/colors.css";
+@import "../configs/tailwind/fonts.css";
+@import "../configs/tailwind/breakpoints.css";
+@import "../configs/tailwind/keyframes.css";
+@import "../configs/tailwind/animations.css";
+@import "../configs/tailwind/backgrounds.css";
+@import "../configs/tailwind/shadows.css";
 
 @custom-variant dark (&:is(.dark *));
 
