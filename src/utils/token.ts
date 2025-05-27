@@ -1,9 +1,5 @@
-import {
-  COOKIE_KEYS,
-  getCookie,
-  removeCookie,
-  setCookie,
-} from "./cookies-client";
+import { COOKIE_KEYS } from "@/constants";
+import { getCookie, removeCookie, setCookie } from "./cookies-client";
 
 export const setAuthToken = (token: string, expires?: number): void => {
   setCookie(COOKIE_KEYS.AUTH_TOKEN, token, {

@@ -1,6 +1,6 @@
+import { COOKIE_KEYS } from "@/constants";
 import { CookieOptions, TokenType } from "@/types";
 import { cookies } from "next/headers";
-import { COOKIE_KEYS } from "./cookies-client";
 
 export const getSecureTokenOptions = (type: TokenType): CookieOptions => {
   const isProd = process.env.NODE_ENV === "production";

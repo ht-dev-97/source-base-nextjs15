@@ -1,19 +1,6 @@
+import { COOKIE_KEYS } from "@/constants";
+import { CookieOptions } from "@/types";
 import Cookies from "js-cookie";
-
-export const COOKIE_KEYS = {
-  AUTH_TOKEN: "authToken",
-  REFRESH_TOKEN: "refreshToken",
-  CSRF_TOKEN: "csrfToken",
-  TOKEN_VERSION: "tokenVersion",
-} as const;
-
-export type CookieOptions = {
-  expires?: number | Date;
-  path?: string;
-  domain?: string;
-  secure?: boolean;
-  sameSite?: "strict" | "lax" | "none";
-};
 
 export const setCookie = (
   name: string,

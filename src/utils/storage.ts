@@ -1,4 +1,4 @@
-type StorageType = "local" | "session";
+import { StorageType } from "@/types";
 
 const isBrowser = typeof window !== "undefined";
 
