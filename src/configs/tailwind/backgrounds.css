@@ -9,7 +9,7 @@
     var(--secondary),
     var(--secondary-foreground)
   );
-  --bg-hero-pattern: url("/assets/images/open-graph-thumbnail.jpg");
+  --bg-hero-pattern: url('/assets/images/open-graph-thumbnail.jpg');
 }
 
 @theme inline {

@@ -1,2 +1,2 @@
-export * from "./global";
-export * from "./cookies";
+export * from './global'
+export * from './cookies'

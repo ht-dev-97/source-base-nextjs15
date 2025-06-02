@@ -1,1 +1,1 @@
-export * from "./useDebounceCallback";
+export * from './useDebounceCallback'

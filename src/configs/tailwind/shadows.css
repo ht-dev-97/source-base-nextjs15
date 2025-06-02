@@ -1,16 +1,18 @@
 :root {
   --brand-shadow-soft: 0 5px 15px rgba(0, 0, 0, 0.07);
-  --brand-shadow-sharp: 0 1px 1px rgba(0, 0, 0, 0.12),
-    0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12);
-  --brand-shadow-diffuse: 0 1px 1px rgba(0, 0, 0, 0.08),
-    0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
-    0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
+  --brand-shadow-sharp:
+    0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12);
+  --brand-shadow-diffuse:
+    0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
+    0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
+    0 16px 16px rgba(0, 0, 0, 0.08);
   --brand-shadow-primary: 0 4px 14px 0 rgba(192, 34, 105, 0.39);
   --brand-shadow-success: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
   --brand-shadow-warning: 0 4px 14px 0 rgba(245, 158, 11, 0.39);
   --brand-shadow-danger: 0 4px 14px 0 rgba(239, 68, 68, 0.39);
-  --brand-shadow-float: 0 10px 20px rgba(0, 0, 0, 0.1),
-    0 6px 6px rgba(0, 0, 0, 0.1);
+  --brand-shadow-float:
+    0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   --brand-shadow-glow: 0 0 15px rgba(192, 34, 105, 0.5);
 }
 

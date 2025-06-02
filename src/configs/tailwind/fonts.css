@@ -1,6 +1,6 @@
 :root {
-  --font-sans: "Arial", "Helvetica", sans-serif;
-  --font-mono: "Fira Code", "Fira Mono", monospace;
+  --font-sans: 'Arial', 'Helvetica', sans-serif;
+  --font-mono: 'Fira Code', 'Fira Mono', monospace;
 }
 
 @theme inline {
