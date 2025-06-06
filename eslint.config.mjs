@@ -17,7 +17,7 @@ const compat = new FlatCompat({
   allConfig: js.configs.all
 })
 
-export default [
+const eslintConfig = [
   {
     ignores: [
       '**/node_modules/*',
@@ -98,12 +98,7 @@ export default [
         }
       ],
 
-      'no-console': [
-        2,
-        {
-          allow: ['warn', 'error']
-        }
-      ]
+      'no-console': 'off'
     }
   },
   ...compat.extends('plugin:testing-library/react').map((config) => ({
@@ -111,3 +106,5 @@ export default [
     files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)']
   }))
 ]
+
+export default eslintConfig
