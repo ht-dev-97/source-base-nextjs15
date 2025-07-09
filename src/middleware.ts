@@ -19,10 +19,12 @@ const ROUTE_CONFIG = {
 /**
  * Extract locale and pathname from URL based on your routing config
  */
-function extractLocaleAndPath(pathname: string): {
+const extractLocaleAndPath = (
+  pathname: string
+): {
   locale: string
   pathWithoutLocale: string
-} {
+} => {
   const segments = pathname.split('/').filter(Boolean)
   const possibleLocale = segments[0]
 
@@ -43,7 +45,7 @@ function extractLocaleAndPath(pathname: string): {
 /**
  * Check if a path matches any of the given patterns
  */
-function matchesPath(pathname: string, paths: readonly string[]): boolean {
+const matchesPath = (pathname: string, paths: readonly string[]): boolean => {
   // Normalize pathname to handle trailing slashes
   const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '')
 
@@ -60,7 +62,7 @@ function matchesPath(pathname: string, paths: readonly string[]): boolean {
 /**
  * Get user authentication status
  */
-async function getAuthStatus(request: NextRequest) {
+const getAuthStatus = async (request: NextRequest) => {
   const authToken = request.cookies.get('authToken')?.value
 
   if (!authToken) {
@@ -84,12 +86,12 @@ async function getAuthStatus(request: NextRequest) {
 /**
  * Create localized redirect URL
  */
-function createLocalizedRedirect(
+const createLocalizedRedirect = (
   request: NextRequest,
   targetPath: string,
   locale: string,
   searchParams?: Record<string, string>
-): NextResponse {
+): NextResponse => {
   // Build the localized path - always prefix with locale since no localePrefix config
   const localizedPath = `/${locale}${targetPath}`
 
