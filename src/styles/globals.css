@@ -3,7 +3,6 @@
 
 @import '../configs/tailwind/colors.css';
 @import '../configs/tailwind/fonts.css';
-@import '../configs/tailwind/breakpoints.css';
 @import '../configs/tailwind/keyframes.css';
 @import '../configs/tailwind/animations.css';
 @import '../configs/tailwind/backgrounds.css';
@@ -133,7 +132,7 @@ html body[data-scroll-locked] {
     @apply border-border outline-ring/50 m-0 scroll-smooth p-0;
   }
   body {
-    @apply bg-background text-foreground font-sn-pro text-base font-normal;
+    @apply bg-background text-foreground font-sn-pro text-base font-normal antialiased;
   }
 }
 

@@ -1,6 +1,5 @@
 import { COOKIE_KEYS } from '@/constants'
-import { getSecureTokenOptions } from '@/utils'
-import jwt from 'jsonwebtoken'
+import { generateJwt, getSecureTokenOptions } from '@/utils'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
@@ -15,15 +14,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const accessToken = jwt.sign({ username }, process.env.JWT_SECRET!, {
-      expiresIn: '15m'
-    })
+    const accessToken = generateJwt({ username }, { expiresIn: '15m' })
 
-    const refreshToken = jwt.sign(
-      { username },
-      process.env.JWT_REFRESH_SECRET!,
-      { expiresIn: '7d' }
-    )
+    const refreshToken = generateJwt({ username }, { expiresIn: '7d' })
 
     const response = NextResponse.json({ success: true }, { status: 200 })
 

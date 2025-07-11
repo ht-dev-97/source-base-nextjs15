@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { COOKIE_KEYS } from '@/constants'
-import { getSecureTokenOptions } from '@/utils'
-import jwt from 'jsonwebtoken'
+import { generateJwt, getSecureTokenOptions, verifyJwt } from '@/utils'
 import { NextRequest, NextResponse } from 'next/server'
 
 type JwtPayload = {
@@ -25,10 +24,7 @@ export async function POST(request: NextRequest) {
     // Verify the refresh token
     let payload: JwtPayload
     try {
-      payload = jwt.verify(
-        refreshToken,
-        process.env.JWT_REFRESH_SECRET!
-      ) as JwtPayload
+      payload = (await verifyJwt(refreshToken)) as JwtPayload
     } catch {
       // Invalid or expired refresh token
       const response = NextResponse.json(
@@ -47,16 +43,10 @@ export async function POST(request: NextRequest) {
     // Generate new tokens
     const { username } = payload
 
-    const accessToken = jwt.sign({ username }, process.env.JWT_SECRET!, {
-      expiresIn: '15m'
-    })
+    const accessToken = generateJwt({ username }, { expiresIn: '15m' })
 
     // Optionally generate new refresh token for rotation
-    const newRefreshToken = jwt.sign(
-      { username },
-      process.env.JWT_REFRESH_SECRET!,
-      { expiresIn: '7d' }
-    )
+    const newRefreshToken = generateJwt({ username }, { expiresIn: '7d' })
 
     // Create the response
     const response = NextResponse.json({ success: true }, { status: 200 })
