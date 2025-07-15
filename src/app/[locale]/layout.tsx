@@ -14,7 +14,7 @@ import Header from '@/components/layout/header'
 import { ProvidersWrapper } from '@/components/providers/providers-wrapper'
 import { Toaster } from '@/components/ui/sonner'
 
-import '../../styles/globals.css'
+import '@/styles/globals.css'
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
